@@ -1,5 +1,6 @@
 import {useState} from 'react'
-
+import { Link, useLocation } from 'react-router-dom'
+import logo from "../assets/logo.png"
 
 const HeaderPagina = ({ notificacoes, marcarTodasComoLidas }) => {
     const [menuAberto, setMenuAberto] = useState(false);
@@ -88,7 +89,6 @@ const HeaderPagina = ({ notificacoes, marcarTodasComoLidas }) => {
               </div>
 
               <nav className={`menu-links${menuAberto ? " active" : ""}`} id="menuLinks">
-                  {/* Única página pronta até agora: Matérias. Vira <Link> de verdade. */}
                   <Link
                       to="/materias"
                       className={pathname === "/materias" ? "ativo" : ""}
@@ -97,15 +97,11 @@ const HeaderPagina = ({ notificacoes, marcarTodasComoLidas }) => {
                       Matérias
                   </Link>
 
-                  {/* Ainda sem página própria — deixa como está, sem navegar de verdade */}
                   <a href="#" className="em-breve" onClick={(e) => e.preventDefault()}>
                       Calendário
                   </a>
                   <a href="#" className="em-breve" onClick={(e) => e.preventDefault()}>
                       Comunidades
-                  </a>
-                  <a href="#" className="em-breve" onClick={(e) => e.preventDefault()}>
-                      Expansão do Conhecimento
                   </a>
                   <a href="#" className="em-breve" onClick={(e) => e.preventDefault()}>
                       Voltar a câmera ↩
