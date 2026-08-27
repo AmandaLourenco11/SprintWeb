@@ -70,7 +70,7 @@ const App = () => {
         notificacoes={notificacoes}
         marcarTodasComoLidas={marcarTodasComoLidas}
       />
-      
+
       <main className="conteudo">
 
         <Routes>
@@ -173,7 +173,7 @@ const App = () => {
 
         
           <Route path="/materias" element={<Materias />}/>
-          
+          <Route path="/materias/:id" element={<PaginaMateria />} />
         </Routes>
       </main>
     </BrowserRouter>

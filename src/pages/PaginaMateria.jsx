@@ -6,6 +6,7 @@ import ListaArquivos from "../components/ListaArquivos";
 import FormularioAnotacao from "../components/FormularioAnotacao";
 import DropdownArquivo from "../components/DropdownArquivo";
 import ViewerEdicaoAnotacao from "../components/ViewerEdicaoAnotacao";
+import NavMobile from "../components/NavMobile";
 import "../css/paginaMateria.css";
 
 function novoId() {
@@ -299,6 +300,8 @@ const PaginaMateria = () => {
         onSalvar={salvarEdicaoViewer}
         onBaixar={baixarItem}
       />
+      
+      <NavMobile />
     </>
   );
 };

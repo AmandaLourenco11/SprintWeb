@@ -273,7 +273,7 @@ const Materia = () => {
 
       <NavMobile />
 
-      {ToastEl}
+
     </>
   );
 };
