@@ -37,25 +37,9 @@ const CardsMaterias = ({ materias, abrirDropdown }) => {
             >
               <div className="cardTopoRow">
 
-                <svg
-                  className="iconeMateria"
-                  width="42"
-                  height="42"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    width="48"
-                    height="48"
-                    rx="12"
-                    fill={bg}
-                  />
-
-                  <path
-                    d="M14 34V16a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v18l-6-3-4 3-4-3-6 3z"
-                    fill={cor}
-                  />
+                <svg className="iconeMateria" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="48"height="48" rx="12" fill={bg}/>
+                  <path d="M14 34V16a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v18l-6-3-4 3-4-3-6 3z" fill={cor}/>
                 </svg>
 
                 <button className="btnOpcoes" title="Opções" onClick={(e) => {
