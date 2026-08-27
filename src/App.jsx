@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import HeaderPagina from "./components/HeaderPagina";
 import AcessoRapido from "./components/AcessoRapido";
 import ProgressoCard from "./components/ProgressoCard";
@@ -12,21 +11,9 @@ import Materias from "./pages/Materias";
 import "./index.css";
 
 const notificacoesIniciais = [
-  {
-    id: 1,
-    texto: "Sua prova de Cálculo I é em 10 dias.",
-    lida: false,
-  },
-  {
-    id: 2,
-    texto: "Nova anotação adicionada em Física II.",
-    lida: false,
-  },
-  {
-    id: 3,
-    texto: "Você completou 3 tarefas hoje. Parabéns!",
-    lida: true,
-  },
+  { id: 1, texto: "Sua prova de Cálculo I é em 10 dias.", lida: false },
+  { id: 2, texto: "Nova anotação adicionada em Física II.", lida: false },
+  { id: 3, texto: "Você completou 3 tarefas hoje. Parabéns!", lida: true },
 ];
 
 const App = () => {
@@ -126,96 +113,27 @@ const App = () => {
 
               <AcessoRapido
                 itens={[
-                  {
-                    id: "materias",
-                    label: "Matérias",
-                    icone: "📘",
-                    cor: "roxo",
-                    link: "/materias",
-                  },
-                  {
-                    id: "arquivos",
-                    label: "Arquivos",
-                    icone: "🗂️",
-                    cor: "azul",
-                    link: "/materias",
-                  },
-                  {
-                    id: "anotacoes",
-                    label: "Anotações",
-                    icone: "✏️",
-                    cor: "laranja",
-                    link: "/materias",
-                  },
-                  {
-                    id: "tarefas",
-                    label: "Tarefas",
-                    icone: "✅",
-                    cor: "verde",
-                    link: "/calendario",
-                  },
+                  {id: "materias", label: "Matérias", icone: "📘", cor: "roxo", link: "/materias"},
+                  {id: "arquivos", label: "Arquivos", icone: "🗂️", cor: "azul", link: "/materias"},
+                  {id: "anotacoes", label: "Anotações", icone: "✏️", cor: "laranja", link: "/materias"},
+                  {id: "tarefas", label: "Tarefas", icone: "✅", cor: "verde", link: "/calendario"},
                 ]}
               />
 
               <div className="secoes">
                 <ProximasProvas
                   provas={[
-                    {
-                      id: 1,
-                      materia: "Cálculo I",
-                      icone: "ƒ(x)",
-                      cor: "roxo",
-                      data: "25/05/2024",
-                      progresso: 65,
-                      diasRestantes: 10,
-                    },
-                    {
-                      id: 2,
-                      materia: "Física II",
-                      icone: "⚛️",
-                      cor: "verde",
-                      data: "02/06/2024",
-                      progresso: 40,
-                      diasRestantes: 18,
-                    },
-                    {
-                      id: 3,
-                      materia: "Economia",
-                      icone: "💹",
-                      cor: "azul",
-                      data: "10/06/2024",
-                      progresso: 20,
-                      diasRestantes: 26,
-                    },
+                    {id: 1, materia: "Cálculo I", icone: "ƒ(x)", cor: "roxo", data: "25/05/2024", progresso: 65, diasRestantes: 10},
+                    {id: 2, materia: "Física II", icone: "⚛️", cor: "verde", data: "02/06/2024", progresso: 40, diasRestantes: 18},
+                    {id: 3, materia: "Economia", icone: "💹", cor: "azul", data: "10/06/2024", progresso: 20, diasRestantes: 26},
                   ]}
                 />
 
                 <UltimosArquivos
                   arquivos={[
-                    {
-                      id: 1,
-                      nome: "Funções de 2° grau",
-                      materia: "Matemática",
-                      data: "20/05",
-                      icone: "📄",
-                      cor: "laranja",
-                    },
-                    {
-                      id: 2,
-                      nome: "Leis de Newton",
-                      materia: "Física",
-                      data: "19/05",
-                      icone: "📄",
-                      cor: "verde",
-                    },
-                    {
-                      id: 3,
-                      nome: "Demanda e Oferta",
-                      materia: "Economia",
-                      data: "18/05",
-                      icone: "📄",
-                      cor: "azul",
-                    },
+                    {id: 1, nome: "Funções de 2° grau", materia: "Matemática", data: "20/05", icone: "📄", cor: "laranja"},
+                    {id: 2, nome: "Leis de Newton", materia: "Física", data: "19/05", icone: "📄", cor: "verde"},
+                    {id: 3, nome: "Demanda e Oferta", materia: "Economia", data: "18/05", icone: "📄", cor: "azul"},
                   ]}
                 />
               </div>

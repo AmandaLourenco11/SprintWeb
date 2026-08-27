@@ -1,11 +1,14 @@
 const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef, cores, mudarNome, mudarCor, cancelar, salvar }) => {
   return (
     <>
-      <div className={`overlay${aberto ? "aberto" : ""}`} onClick={(e) => {
-        if (e.target === e.currentTarget){
+      <div
+        className={`overlay${aberto ? " aberto" : ""}`}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
             cancelar();
-        }
-      }}>
+          }
+        }}
+      >
 
         <div className="modal">
 

@@ -1,35 +1,21 @@
-const ProximasProvas = ({ provas }) => {
+const Overlay = ({cancelar, confirmar}) => {
   return (
-    <div className="secao">
-      <div className="secao-header">
-        <h3>Próximas provas</h3>
-      </div>
-
-      {provas.map((prova) => (
-        <div className="item" key={prova.id}>
-          <div className="item-esq">
-            <span className={`item-icone ${prova.cor}`}>
-              {prova.icone}
-            </span>
-
-            <div>
-              <div className="nome">{prova.materia}</div>
-
-              <div className="detalhe">{prova.data}</div>
-
-              <div className="mini-barra">
-                <span style={{ width: `${prova.progresso}%` }}></span>
-              </div>
-            </div>
-          </div>
-
-          <span className="badge">10 dias</span>
+    <>
+      <div className="overlay" id="overlay">
+      <div className="overlay-box">
+        <p>Deseja confirmar esta ação?</p>
+        <div className="overlay-botoes">
+          <button id="cancelBtn" className="btn-secundario" onClick={cancelar}>
+            Cancelar
+          </button>
+          <button id="okBtn" className="btn-primario" onClick={confirmar}>
+            Confirmar
+          </button>
         </div>
-      ))}
-
-      <a href="/calendario" className="ver-todos">Ver todas →</a>
+      </div>
     </div>
-  );
-};
+    </>
+  )
+}
 
-export default ProximasProvas
+export default Overlay
