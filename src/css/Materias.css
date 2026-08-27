@@ -1,0 +1,325 @@
+.materias {
+  padding: 30px;
+  width: 100%;
+  min-width: 0;
+}
+
+.materias h1 {
+  margin: 0 0 4px;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #12142b;
+}
+
+.materias p {
+  color: var(--bg-color5);
+  font-size: 14px;
+}
+
+.headerMaterias {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.headerMaterias div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.headerMaterias #btnMateria {
+  padding: 10px 18px;
+  border: none;
+  background-color: var(--bg-color4);
+  color: var(--bg-color2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.headerMaterias #btnMateria:hover {
+  background-color: #0d55e0;
+}
+
+.cardsMaterias {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cardMateria {
+  width: 220px;
+  background-color: var(--bg-color2);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+.cardMateria:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.cardMateria img {
+  width: 55px;
+}
+
+.cardMateria h3 {
+  margin-top: 15px;
+}
+
+.cardMateria p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.cardTopoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.btnOpcoes {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  color: var(--bg-color5);
+  font-size: 18px;
+  line-height: 1;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+  margin-top: -4px;
+  margin-right: -6px;
+}
+
+.btnOpcoes:hover {
+  background: #f0f0f5;
+  color: #333;
+}
+
+/* MODAL */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+
+.overlay.aberto {
+  display: flex;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-color2);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.topoModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.topoModal button {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--bg-color4);
+  color: white;
+  font-size: 14px;
+}
+
+.campo {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.campo input {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: var(--bg-color4);
+}
+
+.seletorCores {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btnCor {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+  padding: 0;
+  outline: none;
+}
+
+.btnCor:hover {
+  transform: scale(1.15);
+}
+
+.btnCor.selecionada {
+  border-color: #222;
+  transform: scale(1.15);
+}
+
+.acoesModal {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.acoesModal button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+#btnCriarMateria {
+  background: var(--bg-color4);
+  color: var(--bg-color2);
+}
+
+#btnCriarMateria:hover {
+  background: #0d55e0;
+}
+
+#btnCancelar {
+  background: #e0e0e0;
+  color: #383838;
+}
+
+#btnCancelar:hover {
+  background: #ccc;
+}
+
+.dropdownMenu {
+  position: fixed;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 6px;
+  min-width: 210px;
+  display: none;
+  z-index: 200;
+  animation: fadeInDrop 0.15s ease;
+}
+
+.dropdownMenu.visivel {
+  display: block;
+}
+
+@keyframes fadeInDrop {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.dropItem:hover {
+  background: #f0f0f5;
+}
+
+.dropDanger {
+  color: #cc0000;
+}
+
+.dropDanger:hover {
+  background: #fff0f0;
+}
+
+@media (max-width: 899px) {
+  .cardMateria {
+    width: 100%;
+  }
+
+  .headerMaterias {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .acoesModal {
+    flex-direction: column;
+  }
+
+  .acoesModal button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .seletorCores {
+    gap: 8px;
+  }
+}
+
+@media (min-width: 900px) {
+  .cardMateria {
+    width: 220px;
+  }
+}
