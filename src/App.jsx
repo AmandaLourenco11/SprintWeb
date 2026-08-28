@@ -10,6 +10,7 @@ import UltimosArquivos from "./components/UltimosArquivos";
 import Materias from "./pages/Materias";
 import PaginaMateria from "./pages/PaginaMateria";
 import Comunidade from "./pages/Comunidade"; 
+import Calendario from "./pages/Calendario"; 
 import "./index.css";
 
 const notificacoesIniciais = [
@@ -177,6 +178,7 @@ const App = () => {
           <Route path="/materias" element={<Materias />}/>
           <Route path="/materias/:id" element={<PaginaMateria />} />
           <Route path="/comunidade" element={<Comunidade />} />
+          <Route path="/Calendario" element={<Calendario />} />
         </Routes>
       </main>
     </BrowserRouter>
