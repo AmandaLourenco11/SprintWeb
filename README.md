@@ -1,16 +1,65 @@
-# React + Vite
+# SprintWeb
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido para a Sprint 3, do challenge do 1.°ano do curso de Engenharia de Software da FIAP, em parceria com a empresa JOVI.
 
-Currently, two official plugins are available:
+## Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Node.js
+- CSS3
+- React Router DOM (navegação entre páginas)
+- Vite 
+- ESLint 
 
-## React Compiler
+## Como instalar as dependências
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Clone o repositório por meio do terminal de comando
+git clone https://github.com/AmandaLourenco11/SprintWeb.git
 
-## Expanding the ESLint configuration
+# Acesse a pasta do projeto
+cd SprintWeb
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Instale as dependências
+npm install
+```
+
+## Como executar o projeto
+
+Ainda dentro da pasta do projeto, execute o comando abaixo no terminal:
+```bash
+npm run dev
+```
+
+O projeto será executado em `http://localhost:5173`.
+
+Agora é só navegar e conhecer o ecossistema do JoviClass!
+
+## Usuários e senhas para teste
+
+O projeto não possui sistema de autenticação. A aplicação carrega direto na tela inicial, com dados fixos no código (usuário fictício "Helena") e o progresso salvo no localStorage do navegador.
+
+## Uso de Inteligência Artificial no projeto
+
+As ferrammentas de Inteligência Artificial foram utilizadas em pontos pontuais do desenvolvimento do projeto, principalmente para revisar erros de digitação no código e na documentação, além de auxiliar no entendimento de tecnologias que a equipe ainda não havia utilizado na prática anteriormente, necessárias para replicar o sistema proposto pela equipe, para o Challenge em parceiria com a JOVI, no React. O uso da IA serviu como apoio ao aprendizado e à revisão, e todo o código e conteúdo final foi escrito e validado pela equipe.
+
+
+## Link do Deploy (Vercel)
+
+Link: 
+
+---
+
+Desenvolvido por: 
+
+Amanda Oliveira Lourenço - RM: 572572 
+
+Giovanna Lopes Scalzone - RM: 572285 
+
+Letícia Brandão Couto - RM: 569516 
+
+Nayra Sousa Duarte - RM: 573815 
+
+Paloma do Carmo Dantas - RM: 569995 
+
+ 
