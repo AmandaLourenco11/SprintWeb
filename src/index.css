@@ -16,9 +16,6 @@
   --raio: 18px;
 }
 
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +29,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding-bottom: 78px;
-  /* espaço p/ nav inferior mobile */
 }
 
 #root {
@@ -43,9 +39,6 @@ a {
   text-decoration: none;
 }
 
-/* =========================
-   LOGO
-========================= */
 .logoJovi {
   display: flex;
   align-items: center;
@@ -66,9 +59,6 @@ a {
   letter-spacing: -0.3px;
 }
 
-/* =========================
-   MENU / TOPO
-========================= */
 .menu {
   background: linear-gradient(135deg, var(--grad-inicio) 0%, var(--grad-fim) 100%);
   color: white;
@@ -129,9 +119,6 @@ a {
   border: 2px solid var(--grad-fim);
 }
 
-/* =========================
-   NOTIFICAÇÕES
-========================= */
 .notif-wrapper {
   position: relative;
 }
@@ -262,9 +249,6 @@ a {
   color: var(--bg-color1);
 }
 
-/* =========================
-   BOTÃO HAMBÚRGUER
-========================= */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -281,9 +265,6 @@ a {
   transition: 0.3s;
 }
 
-/* =========================
-   LINKS DO MENU
-========================= */
 .menu-links {
   display: none;
   flex-direction: column;
@@ -320,9 +301,13 @@ a {
   box-shadow: 0 6px 18px rgba(20, 102, 255, 0.4);
 }
 
-/* =========================
-   CONTEÚDO
-========================= */
+.area-principal {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
 .conteudo {
   flex: 1;
   padding: 22px 18px 40px;
@@ -337,7 +322,6 @@ a {
   color: #12142b;
   margin-bottom: 2px;
 }
-
 
 .saudacao p {
   color: var(--bg-color5);
@@ -362,9 +346,6 @@ a {
   margin-bottom: 12px;
 }
 
-/* =========================
-   CARD DE PROGRESSO
-========================= */
 .progresso-card {
   background: linear-gradient(135deg, var(--grad-inicio), var(--bg-color4) 120%);
   border-radius: 22px;
@@ -469,9 +450,6 @@ a {
   opacity: 0.85;
 }
 
-/* =========================
-   CARDS (resumo em números)
-========================= */
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -499,9 +477,6 @@ a {
   margin-top: 6px;
 }
 
-/* =========================
-   ACESSO RÁPIDO
-========================= */
 .acesso-rapido {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -553,9 +528,6 @@ a {
   background: #d9f7e6;
 }
 
-/* =========================
-   SEÇÕES
-========================= */
 .secoes {
   display: flex;
   flex-direction: column;
@@ -676,9 +648,6 @@ a {
   font-weight: 700;
 }
 
-/* =========================
-   SUGESTÃO DO DIA
-========================= */
 .sugestao-card {
   margin-top: 22px;
   background: var(--lilas-suave);
@@ -714,10 +683,6 @@ a {
   font-weight: 700;
 }
 
-
-/* =========================
-   OVERLAY DE CONFIRMAÇÃO
-========================= */
 .overlay {
   position: fixed;
   inset: 0;
@@ -775,9 +740,6 @@ a {
   color: #444;
 }
 
-/* =========================
-   NAV INFERIOR (mobile)
-========================= */
 .nav-mobile {
   position: fixed;
   bottom: 0;
@@ -826,9 +788,15 @@ a {
   font-size: 20px;
 }
 
-/* =========================
-   DESKTOP
-========================= */
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #888;
+  font-size: 13px;
+}
+
 @media (min-width: 900px) {
   body {
     flex-direction: row;
@@ -841,6 +809,21 @@ a {
     padding: 30px 22px;
     position: sticky;
     top: 0;
+    flex-shrink: 0;
+  }
+
+  .area-principal {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+  }
+
+  .conteudo {
+    padding: 40px 44px;
+  }
+
+  .footer {
+    margin-top: auto;
   }
 
   .menu-header {
@@ -873,10 +856,6 @@ a {
     gap: 10px;
     margin-top: 40px;
     width: 100%;
-  }
-
-  .conteudo {
-    padding: 40px 44px;
   }
 
   .cards {
