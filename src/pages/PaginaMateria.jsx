@@ -29,7 +29,13 @@ const PaginaMateria = () => {
   const { id } = useParams();
 
   const [nomeMateria] = useState(() => {
-    return localStorage.getItem(`materia:${id}:nome`) || "Matéria";
+    try {
+      const materias = JSON.parse(localStorage.getItem("materias") || "[]");
+      const materia = materias.find((m) => String(m.id) === String(id));
+      return materia?.nome || "Matéria";
+    } catch {
+      return "Matéria";
+    }
   });
 
   const [itens, setItens] = useState(() => {
