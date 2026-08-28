@@ -1,3 +1,5 @@
+import logoGoogle from "../assets/google-logo.png";
+import logoNotion from "../assets/Notion-Logo.png";
 
 const AcoesRapidas = ({ abrirCriarAnotacao, abrirSeletorArquivo, importarDrive, importarNotion}) => {
   return (
@@ -35,7 +37,7 @@ const AcoesRapidas = ({ abrirCriarAnotacao, abrirSeletorArquivo, importarDrive, 
 
             <button className="acaoCard" onClick={importarDrive}>
                 <span className="acaoIcone">
-                    <img src="" alt="" />
+                    <img src={logoGoogle} alt="" />
                 </span>
 
                 <strong>Google Drive</strong>
@@ -45,7 +47,7 @@ const AcoesRapidas = ({ abrirCriarAnotacao, abrirSeletorArquivo, importarDrive, 
 
             <button className="acaoCard" onClick={importarNotion}>
                 <span className="acaoIcone">
-                    <img src="" alt="" />
+                    <img src={logoNotion} alt="" />
                 </span>
 
                 <strong>Notion</strong>

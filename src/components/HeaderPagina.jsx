@@ -97,6 +97,13 @@ const HeaderPagina = ({ notificacoes, marcarTodasComoLidas }) => {
                         Início
                     </Link>
 
+                    <Link
+                        to="/perfil"
+                        className={pathname === "/perfil" ? "ativo" : ""}
+                        onClick={() => setMenuAberto(false)}
+                    >
+                        Perfil
+                    </Link>
 
                     <Link
                         to="/materias"

@@ -12,6 +12,7 @@ import Materias from "./pages/Materias";
 import PaginaMateria from "./pages/PaginaMateria";
 import Calendario from "./pages/Calendario";
 import Camera from "./pages/Camera";
+import Perfil from "./pages/Perfil";
 import "./index.css";
 
 const notificacoesIniciais = [
@@ -22,7 +23,10 @@ const notificacoesIniciais = [
 
 const Layout = ({ notificacoes, marcarTodasComoLidas }) => (
   <>
-    <HeaderPagina notificacoes={notificacoes} marcarTodasComoLidas={marcarTodasComoLidas} />
+    <HeaderPagina 
+      notificacoes={notificacoes} 
+      marcarTodasComoLidas={marcarTodasComoLidas} 
+    />
     <main className="conteudo"><Outlet /></main>
   </>
 );
@@ -117,6 +121,7 @@ const App = () => {
           <Route path="/materias" element={<Materias />} />
           <Route path="/materias/:id" element={<PaginaMateria />} />
           <Route path="/calendario" element={<Calendario />} />
+          <Route path="/perfil" element={<Perfil />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -222,10 +222,8 @@ const PaginaMateria = () => {
 
     if (item.tipo === "arquivo" && item.url) {
       const a = document.createElement("a");
-
       a.href = item.url;
       a.download = item.nome;
-
       a.click();
 
       return;
@@ -237,14 +235,10 @@ const PaginaMateria = () => {
     );
 
     const url = URL.createObjectURL(blob);
-
     const a = document.createElement("a");
-
     a.href = url;
     a.download = `${item.nome}.txt`;
-
     a.click();
-
     URL.revokeObjectURL(url);
   }
 
