@@ -9,7 +9,6 @@ import ProximasProvas from "./components/ProximasProvas";
 import UltimosArquivos from "./components/UltimosArquivos";
 import Materias from "./pages/Materias";
 import PaginaMateria from "./pages/PaginaMateria";
-import Comunidade from "./pages/Comunidade"; 
 import Calendario from "./pages/Calendario"; 
 import "./index.css";
 
@@ -122,7 +121,6 @@ const App = () => {
                     {id: "arquivos", label: "Arquivos", icone: "🗂️", cor: "azul", link: "/materias"},
                     {id: "anotacoes", label: "Anotações", icone: "✏️", cor: "laranja", link: "/materias"},
                     {id: "tarefas", label: "Tarefas", icone: "✅", cor: "verde", link: "/calendario"},
-                    {id: "comunidade", label: "Comunidade", icone: "👥", cor: "roxo", link: "/comunidades"},
                   ]}
                 />
 
@@ -177,7 +175,6 @@ const App = () => {
 
           <Route path="/materias" element={<Materias />}/>
           <Route path="/materias/:id" element={<PaginaMateria />} />
-          <Route path="/comunidade" element={<Comunidade />} />
           <Route path="/Calendario" element={<Calendario />} />
         </Routes>
       </main>

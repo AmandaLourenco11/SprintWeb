@@ -90,6 +90,15 @@ const HeaderPagina = ({ notificacoes, marcarTodasComoLidas }) => {
 
                 <nav className={`menu-links${menuAberto ? " active" : ""}`} id="menuLinks">
                     <Link
+                        to="/"
+                        className={pathname === "/" ? "ativo" : ""}
+                        onClick={() => setMenuAberto(false)}
+                    >
+                        Início
+                    </Link>
+
+
+                    <Link
                         to="/materias"
                         className={pathname === "/materias" ? "ativo" : ""}
                         onClick={() => setMenuAberto(false)}
@@ -97,16 +106,12 @@ const HeaderPagina = ({ notificacoes, marcarTodasComoLidas }) => {
                         Matérias
                     </Link>
 
-                    <a href="#" className="em-breve" onClick={(e) => e.preventDefault()}>
-                        Calendário
-                    </a>
-
                     <Link
-                        to="/comunidades"
-                        className={pathname === "/comunidades" ? "ativo" : ""}
+                        to="/calendario"
+                        className={pathname === "/calendario" ? "ativo" : ""}
                         onClick={() => setMenuAberto(false)}
                     >
-                        Comunidade
+                        Calendário
                     </Link>
 
                     <a href="#" className="em-breve" onClick={(e) => e.preventDefault()}>

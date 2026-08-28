@@ -10,7 +10,9 @@ const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef,
         }}
       >
 
+
         <div className="modal">
+
 
         <div className="topoModal">
           <p>
@@ -19,11 +21,14 @@ const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef,
               : "Nova Matéria"}
           </p>
 
+
           <button onClick={cancelar}>✕</button>
         </div>
 
+
         <div className="campo">
           <label htmlFor="nomeMateria">Nome da matéria</label>
+
 
           <input
             ref={inputRef}
@@ -32,7 +37,7 @@ const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef,
             placeholder="Ex: Matemática"
             value={nomeInput}
             onChange={(e) =>
-              onNomeChange(e.target.value)
+              mudarNome(e.target.value)
             }
             onKeyDown={(e) => {
               if (e.key === "Enter") {
@@ -42,8 +47,10 @@ const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef,
           />
         </div>
 
+
         <div className="campo">
           <label>Cor da matéria</label>
+
 
           <div className="seletorCores">
             {cores.map(({ cor, nome }) => (
@@ -56,14 +63,16 @@ const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef,
                 }`}
                 style={{ background: cor }}
                 title={nome}
-                onClick={() => onCorChange(cor)}
+                onClick={() => mudarCor(cor)}
               />
             ))}
           </div>
         </div>
 
+
         <div className="acoesModal">
           <button onClick={cancelar}>Cancelar</button>
+
 
           <button onClick={salvar}>
             {editandoId !== null
@@ -72,13 +81,20 @@ const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef,
           </button>
         </div>
 
+
       </div>
 
-      
+
+     
     </div>
     </>
   )
 }
 
+
 export default ModalMateria
+
+
+
+
 
