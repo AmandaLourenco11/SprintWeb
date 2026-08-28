@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import CardsMaterias from "../components/CardsMaterias";
 import ModalMateria from "../components/ModalMateria";
 import DropdownMateria from "../components/DropdownMateria";
-import NavMobile from "../components/NavMobile";
 import '../css/Materias.css'
 
 const CHAVE_MATERIAS = "materias";
@@ -269,9 +268,6 @@ const Materia = () => {
         onRenomear={abrirRenomear}
         onExcluir={excluirMateria}
       />
-
-
-      <NavMobile />
 
 
     </>

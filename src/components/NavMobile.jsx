@@ -1,30 +1,33 @@
+import { Link } from "react-router-dom";
+
 const NavMobile = () => {
   return (
-    <>
-      <nav className="nav-mobile">
-        <a href="/" className="ativo">
-            <span className="nav-icone">🏠︎</span>
-            <span>Início</span>
-        </a>
-        <a href="/materias">
-            <span className="nav-icone">📖</span>
-            <span>Matérias</span>
-        </a>
-        <a href="/camera" className="nav-camera">
-            <span className="nav-icone-camera">📷</span>
-        </a>
-        <a href="/calendario">
-            <span className="nav-icone">📝</span>
-            <span>Tarefas</span>
-        </a>
-        <a href="/perfil">
-            <span className="nav-icone">👤</span>
-            <span>Perfil</span>
-        </a>
-        </nav>
-    </>
-  )
-}
+    <nav className="nav-mobile">
+      <Link to="/" className="ativo">
+        <span className="nav-icone">🏠︎</span>
+        <span>Início</span>
+      </Link>
 
-export default NavMobile
+      <Link to="/materias">
+        <span className="nav-icone">📖</span>
+        <span>Matérias</span>
+      </Link>
 
+      <Link to="/camera" className="nav-camera">
+        <span className="nav-icone-camera">📷</span>
+      </Link>
+
+      <Link to="/calendario">
+        <span className="nav-icone">📝</span>
+        <span>Tarefas</span>
+      </Link>
+
+      <Link to="/perfil">
+        <span className="nav-icone">👤</span>
+        <span>Perfil</span>
+      </Link>
+    </nav>
+  );
+};
+
+export default NavMobile;

@@ -1,19 +1,10 @@
 const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef, cores, mudarNome, mudarCor, cancelar, salvar }) => {
+  if (!aberto) return null;
+
   return (
     <>
-      <div
-        className={`overlay${aberto ? " aberto" : ""}`}
-        onClick={(e) => {
-          if (e.target === e.currentTarget) {
-            cancelar();
-          }
-        }}
-      >
-
-
-        <div className="modal">
-
-
+    <div className="overlay" onClick={(e) => { if (e.target === e.currentTarget) cancelar(); }}>
+      <div className="modal">
         <div className="topoModal">
           <p>
             {editandoId !== null
@@ -41,7 +32,7 @@ const ModalMateria = ({ aberto, editandoId, nomeInput, corSelecionada, inputRef,
             }
             onKeyDown={(e) => {
               if (e.key === "Enter") {
-                onSalvar();
+                salvar();
               }
             }}
           />

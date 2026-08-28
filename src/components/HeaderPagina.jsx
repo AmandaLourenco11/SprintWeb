@@ -114,9 +114,14 @@ const HeaderPagina = ({ notificacoes, marcarTodasComoLidas }) => {
                         Calendário
                     </Link>
 
-                    <a href="#" className="em-breve" onClick={(e) => e.preventDefault()}>
+                    <Link
+                        to="/camera"
+                        className={pathname === "/camera" ? "ativo" : ""}
+                        onClick={() => setMenuAberto(false)}
+                    >
                         Voltar a câmera ↩
-                    </a>
+                    </Link>
+
                 </nav>
             </header>
         </>
