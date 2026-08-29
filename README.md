@@ -30,7 +30,7 @@ git --version
 
 ```bash
 # Clone o repositório por meio do terminal de comando
-git clone https://github.com/AmandaLourenco11/SprintWeb.git
+git clone https://github.com/SheCodes-Sprint-3/SprintWeb.git
 
 # Acesse a pasta do projeto
 cd SprintWeb
@@ -63,7 +63,7 @@ As ferrammentas de Inteligência Artificial foram utilizadas em pontos pontuais 
 
 ## Link do Deploy (Vercel)
 
-Link: 
+[Link do Vercel](https://sprint-web-flame.vercel.app/)
 
 ---
 
