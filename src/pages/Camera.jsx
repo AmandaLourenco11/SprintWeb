@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Tesseract from "tesseract.js";
+const Tesseract = await import("tesseract.js");
 import CameraHeader from "../components/CameraHeader";
 import CameraDropdown from "../components/CameraDropdown";
 import CameraZoom from "../components/CameraZoom";
