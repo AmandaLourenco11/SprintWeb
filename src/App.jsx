@@ -7,7 +7,6 @@ import ResumoCards from "./components/ResumoCards";
 import Overlay from "./components/Overlay";
 import ProximasProvas from "./components/ProximasProvas";
 import UltimosArquivos from "./components/UltimosArquivos";
-import NavMobile from "./components/NavMobile";
 import Footer from "./components/Footer";
 import Materias from "./pages/Materias";
 import PaginaMateria from "./pages/PaginaMateria";
@@ -106,8 +105,6 @@ const App = () => {
                     <a href="/materias" className="btn-revisao">Começar revisão</a>
                   </div>
                 </section>
-
-                <NavMobile />
 
                 {overlayAberto && <Overlay cancelar={() => setOverlayAberto(false)} confirmar={confirmarAcao} />}
               </main>

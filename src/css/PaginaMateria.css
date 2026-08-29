@@ -11,13 +11,12 @@
   --shadow-card: 0 8px 24px rgba(18, 42, 110, .07);
 }
 
-
 .materias {
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
   padding: 28px 24px 110px;
-  background: var(--page-bg); 
+  background: var(--page-bg);
   min-width: 0;
 }
 
@@ -109,9 +108,6 @@
   cursor: pointer;
 }
 
-/* =========================
-   BOTÕES ÕES CABEÇALHO / GENÉRICOS
-========================= */
 .acoesCabecalho {
   display: flex;
   align-items: center;
@@ -161,9 +157,6 @@
   color: white;
 }
 
-/* =========================
-   AÇÕES RÁPIDAS
-========================= */
 .acoesRapidas {
   margin-top: 34px;
 }
@@ -198,6 +191,7 @@
   flex-direction: column;
   align-items: flex-start;
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  overflow: hidden;
 }
 
 .acaoCard:hover {
@@ -216,31 +210,62 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* CORREÇÃO DAS IMAGENS DOS CARDS */
+.acaoCard img {
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 50px !important;
+  max-height: 50px !important;
+  object-fit: contain !important;
+  display: block;
+  flex-shrink: 0;
+}
+
+.acaoIconeLogo {
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 50px !important;
+  max-height: 50px !important;
+  object-fit: contain !important;
+  display: block;
 }
 
 .acaoIconeLogo img {
-  width: 50px;
-  height: 50px;
-  color: #fff;
-  font-size: 28px;
-  font-weight: 900;
-  background: linear-gradient(135deg, #34a853 0 33%, #fbbc05 33% 66%, #4285f4 66%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 50px !important;
+  max-height: 50px !important;
+  object-fit: contain !important;
+  display: block;
 }
 
 .acaoIconeNotion {
+  width: 58px;
+  height: 58px;
   background: #f3f4f7;
   color: #111;
   border: 1px solid #e2e3e7;
   font-family: Georgia, serif;
   font-size: 25px;
   font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .acaoIconeNotion img {
-  width: 120px;
-  height: 40px;
+  width: 70px !important;
+  height: 70px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: block;
 }
 
 .acaoCard strong {
@@ -270,9 +295,6 @@
   line-height: 1;
 }
 
-/* =========================
-   LISTA DE ARQUIVOS
-========================= */
 .arquivosSecao {
   width: 100%;
 }
@@ -419,9 +441,6 @@
   color: #333;
 }
 
-/* =========================
-   SEM ARQUIVOS
-========================= */
 .semArquivos {
   display: flex;
   justify-content: center;
@@ -432,9 +451,6 @@
   font-size: 16px;
 }
 
-/* =========================
-   ÁREA DE ANOTAÇÃO
-========================= */
 .areaAnotacao {
   background: var(--card-bg);
   border-radius: 22px;
@@ -511,9 +527,6 @@
   margin-top: 16px;
 }
 
-/* =========================
-   DROPDOWN CONTEXTUAL (arquivo)
-========================= */
 .dropdownMenu {
   position: fixed;
   background: #fff;
@@ -531,8 +544,15 @@
 }
 
 @keyframes fadeInDrop {
-  from { opacity: 0; transform: translateY(-6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dropItem {
@@ -569,9 +589,6 @@
   background: #eef0ff;
 }
 
-/* =========================
-   BADGES
-========================= */
 .badgeTipo {
   font-size: 11px;
   font-weight: 700;
@@ -581,11 +598,25 @@
   letter-spacing: 0.3px;
 }
 
-.badgeTipo.anotacao { background: #fff3cd; color: #8a6200; }
-.badgeTipo.arquivo  { background: #eef2ff; color: #3d5af1; }
-.badgeTipo.pdf      { background: #fde8e8; color: #c0392b; }
-.badgeTipo.imagem   { background: #e8f8f0; color: #1a8a55; }
+.badgeTipo.anotacao {
+  background: #fff3cd;
+  color: #8a6200;
+}
 
+.badgeTipo.arquivo {
+  background: #eef2ff;
+  color: #3d5af1;
+}
+
+.badgeTipo.pdf {
+  background: #fde8e8;
+  color: #c0392b;
+}
+
+.badgeTipo.imagem {
+  background: #e8f8f0;
+  color: #1a8a55;
+}
 
 .viewerOverlay {
   position: fixed;
@@ -606,8 +637,13 @@
 }
 
 @keyframes fadeOverlay {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .viewerModal {
@@ -624,8 +660,15 @@
 }
 
 @keyframes slideUpModal {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .viewerHeader {
@@ -732,15 +775,18 @@
   margin-top: 20px;
 }
 
-
-
 @media (max-width: 699px) {
   .materias {
     padding: 26px 18px 105px;
   }
 
-  .headerMaterias { gap: 17px; }
-  .tituloBusca { gap: 20px; }
+  .headerMaterias {
+    gap: 17px;
+  }
+
+  .tituloBusca {
+    gap: 20px;
+  }
 
   .tituloBusca h1,
   .materias h1 {
@@ -757,7 +803,9 @@
     width: 54px;
   }
 
-  .acoesCabecalho { width: 100%; }
+  .acoesCabecalho {
+    width: 100%;
+  }
 
   .btnPrimario,
   .btnSecundario {
@@ -765,7 +813,9 @@
     justify-content: center;
   }
 
-  .acoesRapidas { margin-top: 30px; }
+  .acoesRapidas {
+    margin-top: 30px;
+  }
 
   .acoesRapidas h2,
   .arquivosTitulo h2 {
@@ -789,7 +839,25 @@
     margin-bottom: 17px;
   }
 
-  .acaoCard strong { font-size: 15px; }
+  .acaoCard img,
+  .acaoIconeLogo,
+  .acaoIconeLogo img {
+    width: 45px !important;
+    height: 45px !important;
+    max-width: 45px !important;
+    max-height: 45px !important;
+  }
+
+  .acaoIconeNotion img {
+    width: 52px !important;
+    height: 52px !important;
+    max-width: 52px !important;
+    max-height: 52px !important;
+  }
+
+  .acaoCard strong {
+    font-size: 15px;
+  }
 
   .acaoDescricao {
     font-size: 12px;
@@ -807,16 +875,22 @@
     height: 48px !important;
   }
 
-  .arquivosTitulo { align-items: flex-end; }
+  .arquivosTitulo {
+    align-items: flex-end;
+  }
 
-  .listaArquivos { border-radius: 18px; }
+  .listaArquivos {
+    border-radius: 18px;
+  }
 
   .itemArquivo {
     min-height: 80px;
     padding: 13px 12px;
   }
 
-  .arquivoInfo { gap: 11px; }
+  .arquivoInfo {
+    gap: 11px;
+  }
 
   .arquivoIcone {
     width: 43px;
@@ -834,7 +908,6 @@
     font-size: 10.5px;
   }
 
-  
   .btnAbrirArquivo {
     display: none;
   }
@@ -865,7 +938,9 @@
     max-width: 100%;
   }
 
-  .viewerPDF { height: 55vh; }
+  .viewerPDF {
+    height: 55vh;
+  }
 }
 
 @media (max-width: 380px) {
@@ -874,9 +949,17 @@
     padding-right: 14px;
   }
 
-  .acaoCard { min-height: 190px; }
-  .acaoDescricao { font-size: 11px; }
-  .arquivoNome { max-width: 145px; }
+  .acaoCard {
+    min-height: 190px;
+  }
+
+  .acaoDescricao {
+    font-size: 11px;
+  }
+
+  .arquivoNome {
+    max-width: 145px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -884,8 +967,19 @@
     padding: 42px 42px 110px;
   }
 
-  .headerMaterias { max-width: 980px; }
-  .campoBuscar { max-width: 620px; }
-  .acoesGrid { max-width: 980px; }
-  .listaArquivos { max-width: 980px; }
+  .headerMaterias {
+    max-width: 980px;
+  }
+
+  .campoBuscar {
+    max-width: 620px;
+  }
+
+  .acoesGrid {
+    max-width: 980px;
+  }
+
+  .listaArquivos {
+    max-width: 980px;
+  }
 }

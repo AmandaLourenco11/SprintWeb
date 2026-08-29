@@ -5,7 +5,7 @@ import CameraDropdown from "../components/CameraDropdown";
 import CameraZoom from "../components/CameraZoom";
 import CameraControls from "../components/CameraControls";
 import CameraOverlay from "../components/CameraOverlay";
-import "../css/camera.css";
+import "../css/Camera.css";
 
 const Camera = () => {
   const videoRef = useRef(null);

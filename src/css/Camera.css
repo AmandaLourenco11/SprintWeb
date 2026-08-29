@@ -8,7 +8,6 @@
 }
 
 /* Página da câmera */
-
 .camera-page {
   width: 100%;
   height: 100vh;
@@ -31,7 +30,6 @@
 }
 
 /* Topo */
-
 .top-status-bar {
   background: #000;
   padding: 14px 18px 10px;
@@ -89,7 +87,6 @@
 }
 
 /* Área da câmera */
-
 .camera-viewport {
   position: relative;
   width: 100%;
@@ -111,7 +108,6 @@
 }
 
 /* Dropdown */
-
 .dropdown-menu {
   display: none;
   flex-direction: column;
@@ -197,7 +193,6 @@
 }
 
 /* Zoom */
-
 .zoom-bar {
   position: absolute;
   bottom: 18px;
@@ -245,7 +240,6 @@
 }
 
 /* Resultado OCR */
-
 .camera-resultado {
   position: absolute;
   bottom: 70px;
@@ -264,7 +258,6 @@
 }
 
 /* Botão confirmar */
-
 .confirm-btn {
   position: absolute;
   bottom: 70px;
@@ -294,7 +287,6 @@
 }
 
 /* Barra inferior */
-
 .bottom-bar {
   background: #000;
   padding: 10px 0 28px;
@@ -355,7 +347,6 @@
 }
 
 /* Botão shutter */
-
 .shutter-btn {
   width: 80px;
   height: 80px;
@@ -389,7 +380,6 @@
 }
 
 /* Overlay */
-
 .overlay {
   position: fixed;
   inset: 0;
@@ -424,7 +414,6 @@
 }
 
 /* Banner do overlay */
-
 .overlay-banner {
   background: linear-gradient(135deg, #1a56db, #5e8aeb);
   padding: 20px;
@@ -466,7 +455,6 @@
 }
 
 /* Corpo do overlay */
-
 .overlay-body {
   padding: 20px;
 }
@@ -519,7 +507,6 @@
 }
 
 /* Botões do overlay */
-
 .overlay-actions {
   display: flex;
   gap: 10px;
@@ -557,7 +544,6 @@
 }
 
 /* Responsividade */
-
 @media (max-width: 430px) {
   .phone-wrapper {
     max-width: 100%;

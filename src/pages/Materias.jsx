@@ -216,6 +216,7 @@ const Materia = () => {
 
   return (
     <>
+      {ToastEl}
       <div className="materias">
 
         <div className="headerMaterias">

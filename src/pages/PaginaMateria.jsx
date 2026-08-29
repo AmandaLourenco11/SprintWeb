@@ -6,8 +6,7 @@ import ListaArquivos from "../components/ListaArquivos";
 import FormularioAnotacao from "../components/FormularioAnotacao";
 import DropdownArquivo from "../components/DropdownArquivo";
 import ViewerEdicaoAnotacao from "../components/ViewerEdicaoAnotacao";
-import NavMobile from "../components/NavMobile";
-import "../css/paginaMateria.css";
+import "../css/PaginaMateria.css";
 
 function novoId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -300,8 +299,6 @@ const PaginaMateria = () => {
         onSalvar={salvarEdicaoViewer}
         onBaixar={baixarItem}
       />
-      
-      <NavMobile />
     </>
   );
 };

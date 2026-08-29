@@ -438,28 +438,6 @@ export default function CalendarioJoviClass() {
           Adicionar Tarefa
         </button>
       </JanelaModal>
-
-      <div className="navegacao-inferior">
-        <button className="botao-navegacao-inferior-ativo">
-          <Home size={18} />
-          <span className="rotulo-navegacao-inferior">Início</span>
-        </button>
-        <button className="botao-navegacao-inferior">
-          <BookOpen size={18} />
-          <span className="rotulo-navegacao-inferior">Matérias</span>
-        </button>
-        <button className="botao-camera-navegacao">
-          <Camera size={20} color="white" />
-        </button>
-        <button className="botao-navegacao-inferior">
-          <ClipboardList size={18} />
-          <span className="rotulo-navegacao-inferior">Tarefas</span>
-        </button>
-        <button className="botao-navegacao-inferior">
-          <User size={18} />
-          <span className="rotulo-navegacao-inferior">Perfil</span>
-        </button>
-      </div>
     </div>
   );
 }
