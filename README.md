@@ -58,7 +58,7 @@ O projeto não possui sistema de autenticação. A aplicação carrega direto na
 
 ## Uso de Inteligência Artificial no projeto
 
-As ferrammentas de Inteligência Artificial foram utilizadas em pontos pontuais do desenvolvimento do projeto, principalmente para revisar erros de digitação no código e na documentação, além de auxiliar no entendimento de tecnologias que a equipe ainda não havia utilizado na prática anteriormente,  como o React Router DOM, necessárias para replicar o sistema proposto pela equipe, para o Challenge em parceiria com a JOVI, no React. O uso da IA serviu como apoio ao aprendizado e à revisão, e todo o código e conteúdo final foi escrito e validado pela equipe.
+As ferramentas de Inteligência Artificial foram utilizadas em pontos pontuais do desenvolvimento do projeto, principalmente para revisar erros de digitação no código e na documentação, além de auxiliar no entendimento de tecnologias que a equipe ainda não havia utilizado na prática anteriormente,  como o React Router DOM, necessárias para replicar o sistema proposto pela equipe, para o Challenge em parceiria com a JOVI, no React. O uso da IA serviu como apoio ao aprendizado e à revisão, e todo o código e conteúdo final foi escrito e validado pela equipe.
 
 
 ## Link do Deploy (Vercel)
